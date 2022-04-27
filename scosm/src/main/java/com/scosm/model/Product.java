@@ -15,6 +15,7 @@ import java.math.BigDecimal;
 @Getter
 @Setter
 @Entity
+@Table(name = "product")
 public class Product {
 
     @Id
@@ -39,6 +40,12 @@ public class Product {
     private Boolean status;
 
     private Boolean sortOrder;
+
+    //TODO private Manufacturer manufacturer;
+
+    //TODO meta keywords, title, description
+    //TODO SKU,EAN if needed
+    //TODO view counter for statistics | MOQ, dateAdded, dateModified, dateAvailabe, bonusPoints?
 
 
 }
