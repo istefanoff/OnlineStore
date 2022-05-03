@@ -64,6 +64,20 @@
 			<artifactId>spring-security-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.modelmapper/modelmapper -->
+		<dependency>
+			<groupId>org.modelmapper</groupId>
+			<artifactId>modelmapper</artifactId>
+			<version>0.6.5</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/io.scalajs.npm/bcrypt -->
+		<dependency>
+			<groupId>io.scalajs.npm</groupId>
+			<artifactId>bcrypt_sjs0.6_2.12</artifactId>
+			<version>1.0.2-4</version>
+		</dependency>
+
+
 	</dependencies>
 
 	<build>

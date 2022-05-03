@@ -21,9 +21,10 @@ public class Address {
     private String address;
 
     private String city;
-
-    private String postCode;
-
+    //
+//    private String postCode;
+//
     @ManyToOne
+    @JoinColumn(name = "zone_id", referencedColumnName = "id")
     private Zone zone;
 }

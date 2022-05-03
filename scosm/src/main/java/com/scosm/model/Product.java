@@ -25,6 +25,10 @@ public class Product {
     @NotNull
     private String name;
 
+    @ManyToOne
+    @JoinColumn(name = "order_id", referencedColumnName = "id")
+    private Order order;
+
     @NotNull
     @UniqueElements
     private String model;

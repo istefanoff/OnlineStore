@@ -7,10 +7,11 @@ import lombok.Setter;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
+import java.util.List;
 import java.util.Map;
 
 @Entity
-@Table
+@Table(name = "orders")
 @Getter
 @Setter
 @NoArgsConstructor
@@ -21,6 +22,7 @@ public class Order {
     private Long id;
 
     @OneToOne
+    //@JoinColumn(name = "customer_id", referencedColumnName = "id")
     private Customer customer;
 
     private String comment;
@@ -29,8 +31,9 @@ public class Order {
 
 
     // product and quantity
-    @ManyToMany
-    private Map<Product, Integer> product;
+    @OneToMany
+    @Column(name = "products")
+    private List<Product> product;
 
     private BigDecimal total;
     //TODO added, modified, COD, shipping, discount_voucher(coupon),
